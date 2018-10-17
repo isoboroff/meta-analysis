@@ -1,0 +1,12 @@
+For score standardization
+
+There is some question about whether standardization scores should be retained from other experiments or recomputed.  One reason for this is that there may be a greater range of system scores available for determining the standardization factors at the time of the experiment.  Another concern is that since the procedure whereby a set of standardization factors are derived might be under-documented or erroneous.  In a practical sense, this only affects whether scores between different experiments (or perhaps different papers) should be compared one to another.
+
+In any event, we obtained the standardization scores from https://people.eng.unimelb.edu.au/ammoffat/ir_eval/, as described in the SIGIR 2008 paper by Webber, Moffat, and Zobel.  When I computed the standardization factors for the Terabyte collections, my results differed from theirs.  This could come from a mistake in my computation, or a mistake in which runs I selected for establishing the factors, or a difference in how the original AP scores were computed (eg with different qrels), or from bugs in all of these.
+
+Stop blathering.  Here is the plan:
+
+ - for collections for which the Unimelb set has standardization factors, use those
+ - otherwise, pick something and document it.
+
+"Otherwise" for this paper is Blogs06 and the DD NYT data.  For the DD NYT data, we don't have pools for runs or MAP scores.
